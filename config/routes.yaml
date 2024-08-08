@@ -1,0 +1,19 @@
+collection_add:
+    path: /api/storage
+    controller: App\Controller\StorageController::add
+    methods: [POST]
+
+collection_remove:
+    path: /api/storage/{type}/{id}
+    controller: App\Controller\StorageController::remove
+    methods: [DELETE]
+
+collection_list:
+    path: /api/storage
+    controller: App\Controller\StorageController::list
+    methods: [GET]
+
+search_products:
+    path: api/search
+    controller: App\Controller\StorageController::search
+    methods: [GET]

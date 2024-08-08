@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "8e513e2f-530c-4abf-b110-689741ebc7be",
+		"name": "supermarket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5740803"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/storage?name=ce&type=fruit&unit=g",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"storage"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ce"
+						},
+						{
+							"key": "type",
+							"value": "fruit"
+						},
+						{
+							"key": "unit",
+							"value": "g"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/search?q=Pepper",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Pepper"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Pepper\",\n    \"type\": \"vegetable\",\n    \"quantity\": 1,\n    \"unit\": \"g\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/storage",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"storage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/storage/vegetable/10",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"storage",
+						"vegetable",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8001",
+			"type": "string"
+		}
+	]
+}
