@@ -43,6 +43,12 @@ The project is built using the following technologies:
 - [PHPUnit](https://phpunit.de/)
 - [Makefile](https://makefiletutorial.com/)
 
+## Configuration
+
+Adjust the configuration in the `.env` file to meet your requirements before starting the project setup. 
+
+If the `.env` file is missing, copy and rename the `.env.example` file from the project's directory to create it.
+
 
 ## Set Up Instructions
 
